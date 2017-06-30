@@ -6,6 +6,14 @@ In our previous tutorial I showed you how to send an SMS using the Nexmo API and
 
 [View the source code on GitHub](https://github.com/workbetta/nexmo-rails-quickstart/blob/master/app/controllers/sms_delivery_receipts_controller.rb)
 
+## Prerequisites
+
+For this tutorial I assume you will:
+
+- Have a basic understanding of Ruby, and Rails
+- Have [Rails](http://rubyonrails.org/) installed on your machine
+- Have followed our previous tutorial on Sending an SMS with Ruby on Rails
+
 ## What Does "Delivered" Mean?
 
 When you make a successful SMS request to Nexmo, the API returns an array of `message` objects, ideally with a status of `0` for "Success". At this moment the SMS has not been delivered yet, rather it's been queued for delivery with Nexmo.

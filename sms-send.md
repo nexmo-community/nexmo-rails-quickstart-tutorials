@@ -10,10 +10,10 @@ In this tutorial, and the ones to follow, I will take you through some real-life
 
 ## Prerequisites
 
-For this tutorial I assume you will have:
+For this tutorial I assume you will:
 
-- A basic understanding of Ruby, and Rails
-- [Rails](http://rubyonrails.org/) installed on your machine
+- Have a basic understanding of Ruby, and Rails
+- Have [Rails](http://rubyonrails.org/) installed on your machine
 
 ## Get Your API Keys
 
@@ -27,7 +27,7 @@ Before we can make our first API call you will need to [sign up for a Nexmo acco
 
 While in some countries you can send an SMS without buying a Virtual Nexmo Number, other countries like the USA will require you to have a Nexmo number for your SMS messages to originate from.
 
-There are 2 ways to purchase a Nexmo number. The first way is to install the Nexmo CLI tool (a NodeJS command line interface) and then run the following commands to find and purchase an SMS enabled number:
+There are 2 ways to purchase a Nexmo number. The first way is to install the [Nexmo CLI tool](https://github.com/nexmo/nexmo-cli) (a NodeJS command line interface) and then run the following commands to find and purchase an SMS enabled number:
 
 ```sh
 $ nexmo number:search US --sms
