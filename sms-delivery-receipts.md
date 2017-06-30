@@ -104,7 +104,7 @@ _Note: Some US carriers do not support the feature. Also, if you are sending SMS
 
 ## To sum things up
 
-That's it for this tutorial. We've set up our Rails application to receive webhooks, informed Nexmo of where to find our server, and processed an incoming webhook with a Delivery Receipt.
+That's it for this tutorial. We've set up our Rails application to receive webhooks, informed Nexmo where to find our server, and processed an incoming webhook with a Delivery Receipt.
 
 You can view the [code used in this tutorial](https://github.com/workbetta/nexmo-rails-quickstart/blob/master/app/controllers/sms_delivery_receipts_controller.rb) on GitHub.
 
