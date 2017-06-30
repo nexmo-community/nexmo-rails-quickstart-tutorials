@@ -1,6 +1,6 @@
 # How to receive an SMS Delivery Receipt from a Mobile Carrier with Ruby on Rails
 
-_This is the second article in a series of "Getting Started with Nexmo and Ruby on Rails" tutorials._
+_This is the second article in a series of "Getting Started with Nexmo SMS and Ruby on Rails" tutorials._
 
 In our previous tutorial I showed you how to send an SMS using the Nexmo API and the Nexmo Ruby gem in a Rails application. What we haven't looked at though is how to know when a message has been delivered. In this tutorial we will look at what it means for a message to be delivered, and how we can listen for Delivery Receipts from Nexmo to update the status of an SMS in our application.
 
@@ -106,7 +106,7 @@ _Note: Some US carriers do not support the feature. Also, if you are sending SMS
 
 That's it for this tutorial. We've set up our Rails application to receive webhooks, informed Nexmo of where to find our server, and processed an incoming webhook with a Delivery Receipt.
 
-You can view the [code used in this tutorial](ttps://github.com/workbetta/nexmo-rails-quickstart/blob/master/app/controllers/sms_delivery_receipts_controller.rb) on GitHub.
+You can view the [code used in this tutorial](https://github.com/workbetta/nexmo-rails-quickstart/blob/master/app/controllers/sms_delivery_receipts_controller.rb) on GitHub.
 
 ## Next steps
 

@@ -1,6 +1,6 @@
 # How to Receive SMS Messages with Ruby on Rails
 
-_This is the third article in a series of "Getting Started with Nexmo and Ruby on Rails" tutorials._
+_This is the third article in a series of "Getting Started with Nexmo SMS and Ruby on Rails" tutorials._
 
 In the previous article, you set up your Rails application to be publicly accessible by Nexmo, and then received a **Delivery Receipt** for a sent message. In this article you will learn how to receive an inbound SMS by implementing a similar webhook endpoint in Ruby on Rails.
 
@@ -109,7 +109,7 @@ Ok, now start your server, ensure you have something like Ngrok running, and sen
 
 That's it for this tutorial. We've set up our Rails application to receive inbound SMS webhooks, informed Nexmo of where to find our server, processed an incoming SMS webhook, and replied back to the sender.
 
-You can view the [code used in this tutorial](ttps://github.com/workbetta/nexmo-rails-quickstart/blob/master/app/controllers/inbound_sms_controller.rb) on GitHub.
+You can view the [code used in this tutorial](https://github.com/workbetta/nexmo-rails-quickstart/blob/master/app/controllers/inbound_sms_controller.rb) on GitHub.
 
 ## Next steps
 

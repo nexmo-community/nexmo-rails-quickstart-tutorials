@@ -1,6 +1,6 @@
 # How to Send SMS Messages with Ruby on Rails
 
-_This is the first article in a series of "Getting Started with Nexmo and Ruby on Rails" tutorials._
+_This is the first article in a series of "Getting Started with Nexmo SMS and Ruby on Rails" tutorials._
 
 With the help of the [Nexmo SMS API](https://docs.nexmo.com/messaging/sms-api) you can send SMS anywhere in the world. All you need is your virtual phone number, the [Ruby Gem](https://github.com/Nexmo/nexmo-ruby), and a few lines of code.
 
@@ -65,7 +65,7 @@ nexmo = Nexmo::Client.new
 
 ## Send an SMS Message with Ruby
 
-With out API client in place, sending an SMS is easy, we simply call the `send_message` method on the initialized client and pass in the phone number we want to send `to`, the Nexmo number we want the number to appear `from`, and the `text` to send.
+With our API client in place, sending an SMS is easy, we simply call the `send_message` method on the initialized client and pass in the phone number we want to send `to`, the Nexmo number we want the number to appear `from`, and the `text` to send.
 
 ```ruby
 response = nexmo.send_message(
@@ -79,7 +79,7 @@ There are a lot more parameters that we could pass into this method, have a look
 
 ## Send an SMS Message from Rails
 
-In a Rails application we'd probably have a Model for SMS where we can store the `to`, `from`, and `text` data before sending it off to Nexmo. In my demo application I've wipped up [a simple form](https://github.com/workbetta/nexmo-rails-quickstart/blob/master/app/views/outbound_sms/index.html.erb) for this model.
+In a Rails application we'd probably have a Model for SMS where we can store the `to`, `from`, and `text` data before sending it off to Nexmo. In my demo application I've whipped up [a simple form](https://github.com/workbetta/nexmo-rails-quickstart/blob/master/app/views/outbound_sms/index.html.erb) for this model.
 
 `localhost:3000/outbound_sms`
 
@@ -137,7 +137,7 @@ Now go ahead, submit the form and within a few seconds you should seen an SMS ar
 
 That's it for this tutorial. We've created a Nexmo account, fetched our API credentials, installed and initialized the Ruby gem, and created a deep integration into our Rails application.
 
-You can view the [code used in this tutorial](ttps://github.com/workbetta/nexmo-rails-quickstart/blob/master/app/controllers/outbound_sms_controller.rb) on GitHub.
+You can view the [code used in this tutorial](https://github.com/workbetta/nexmo-rails-quickstart/blob/master/app/controllers/outbound_sms_controller.rb) on GitHub.
 
 ## Next steps
 
