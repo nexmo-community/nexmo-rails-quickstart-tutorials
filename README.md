@@ -13,8 +13,8 @@ Code for these tutorials can be found in [a separate repository](https://github.
 Tutorial                                                                              | Code Sample
 ------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------
 [How to Send SMS Messages with Ruby on Rails](sms-send.md)                            | [outbound_sms_controller.rb](https://github.com/workbetta/nexmo-rails-quickstart/tree/master/app/controllers/outbound_sms_controller.rb)
-[How to Receive SMS Messages with Ruby on Rails](sms-receive.md)                      | [inbound_sms_controller.rb](https://github.com/workbetta/nexmo-rails-quickstart/tree/master/app/controllers/inbound_sms_controller.rb)
 [How to receive an SMS Delivery Receipt with Ruby on Rails](sms-delivery-receipts.md) | [sms_delivery_receipts_controller.rb](https://github.com/workbetta/nexmo-rails-quickstart/tree/master/app/controllers/sms_delivery_receipts_controller.rb)
+[How to Receive SMS Messages with Ruby on Rails](sms-receive.md)                      | [inbound_sms_controller.rb](https://github.com/workbetta/nexmo-rails-quickstart/tree/master/app/controllers/inbound_sms_controller.rb)
 
 ### Voice
 
