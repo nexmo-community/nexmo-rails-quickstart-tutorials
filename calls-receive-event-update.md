@@ -60,7 +60,7 @@ The hard part is done at this point really. When a Call has been initiated Nexmo
 ```json
 {
   "uuid": "abcd1234-ancd-abcd-abcd-abcd1234abcd",
-  "conversation_uuid": "defg2345-defg-defg-defg-defg2345abcd",
+  "conversation_uuid": "CON-defg2345-defg-defg-defg-defg2345abcd",
   "status": "ringing",
   "direction": "outbound"
 }

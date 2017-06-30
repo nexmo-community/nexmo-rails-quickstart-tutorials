@@ -57,7 +57,7 @@ In our previous serious of SMS tutorials we were able to configure a phone numbe
 
 _Diagram: Using The Voice API to call your mobile phone_
 
-Our first step is to create an application, specifying the callback URLs for inbound calls (the `answer_url`) and call events (the `event_url`). Assuming your Rails application is publicly accessible either directly or via a tool like [ngrok](http://ngrok.io), your command will look something like this.
+Our first step is to create an application and saving it's UUID and private encryption key. We will be passing in some URLs as well for various callbacks, which we will need in future tutorials. For now, the URLs don't matter too much.
 
 ```sh
 $ nexmo app:create "My Voice App" http://abc123.ngrok.io/inbound_calls http://abc123.ngrok.io/call_events --keyfile private.key --answer_method POST --event_method POST
