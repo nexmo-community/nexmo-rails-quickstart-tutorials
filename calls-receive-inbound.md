@@ -1,4 +1,4 @@
-# How to Handle Inbound PPhoen Calls with Ruby on Rails
+# How to Handle Inbound Phone Calls with Ruby on Rails
 
 _This is the third article in a series of "Getting Started with Nexmo Voice APIs and Ruby on Rails" tutorials. It continues the "Getting Started with Nexmo SMS and Ruby on Rails" series._
 
