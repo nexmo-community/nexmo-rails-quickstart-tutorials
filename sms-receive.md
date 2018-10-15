@@ -2,7 +2,7 @@
 
 _This is the third article in a series of "Getting Started with Nexmo SMS and Ruby on Rails" tutorials._
 
-In the previous article, you set up your Rails application to be publicly accessible by Nexmo, and then received a **Delivery Receipt** for a sent message. In this article you will learn how to receive an inbound SMS by implementing a similar webhook endpoint in Ruby on Rails.
+In the previous article, you set up your Rails application to be publicly accessible by Nexmo and then received a **Delivery Receipt** for a sent message. In this article, you will learn how to receive an inbound SMS by implementing a similar webhook endpoint in Ruby on Rails.
 
 [View the source code on GitHub](https://github.com/workbetta/nexmo-rails-quickstart/blob/master/app/controllers/inbound_sms_controller.rb)
 
@@ -22,7 +22,7 @@ To receive this webhook you will need to set up a webhook endpoint and tell Nexm
 
 ![DLR flow](sms-receive/diagram-receive.png)
 
-In the previous tutorial I already covered how to set up [Ngrok](http://ngrok.io) for your application to allow it to be accessible even in a development environment.
+In the previous tutorial, I already covered how to set up [Ngrok](http://ngrok.io) for your application to allow it to be accessible even in a development environment.
 
 ## Set the Webhook Endpoint with Nexmo
 
@@ -57,7 +57,7 @@ The hard part is really done again at this point. When an SMS has been sent to y
 }
 ```
 
-In this payload the sending number is identified by the `msisdn` parameter, and your Nexmo number is the `to` parameter. Let's add a new controller to process this payload and store a new SMS record.
+In this payload, the sending number is identified by the `msisdn` parameter, and your Nexmo number is the `to` parameter. Let's add a new controller to process this payload and store a new SMS record.
 
 ```ruby
 # app/controllers/inbound_sms_controller.rb
@@ -113,4 +113,4 @@ You can view the [code used in this tutorial](https://github.com/workbetta/nexmo
 
 ## Next steps
 
-In the next tutorial we will move on from SMS and start looking at making our first phone call from a Rails application.
+In the next tutorial, we will move on from SMS and start looking at making our first phone call from a Rails application.
