@@ -2,7 +2,7 @@
 
 _This is the second article in a series of "Getting Started with Nexmo Voice APIs and Ruby on Rails" tutorials. It continues the "Getting Started with Nexmo SMS and Ruby on Rails" series._
 
-In our previous tutorial I showed you how to make a text-to-speech call using the Nexmo API and the Nexmo Ruby gem in a Rails application. What we haven't looked at though is how to know when a call has connected, or completed. In this tutorial we will look at how we can listen for Call Events from Nexmo to update the status of an Call in our application.
+In our previous tutorial, I showed you how to make a text-to-speech call using the Nexmo API and the Nexmo Ruby gem in a Rails application. What we haven't looked at though is how to know when a call has connected or completed. In this tutorial, we will look at how we can listen for Call Events from Nexmo to update the status of an Call in our application.
 
 [View the source code on GitHub](https://github.com/workbetta/nexmo-rails-quickstart/blob/master/app/controllers/call_events_controller.rb)
 
@@ -23,7 +23,7 @@ To receive this webhook in your application, you will need to set up a webhook e
 
 ## Set the Webhook Endpoint with Nexmo
 
-To receive a webhook we need 2 things, firstly we need to set up our server so that Nexmo can make a HTTP call to it. If you are developing on a local machine this might be hard, which is where tooks like [Ngrok](http://ngrok.io) come in. I won't go too much into detail, but with Ngrok you can make your local Rails server available within seconds to the outside world.
+To receive a webhook we need 2 things, firstly we need to set up our server so that Nexmo can make a HTTP call to it. If you are developing on a local machine this might be hard, which is where tools like [Ngrok](http://ngrok.io) come in. I won't go too much into detail, but with Ngrok you can make your local Rails server available within seconds to the outside world.
 
 ```sh
 # forwarding port 3000 to an externally accessible URL
@@ -89,7 +89,7 @@ class CallEventsController < ApplicationController
 end
 ```
 
-In this example we find the Call record with the `uuid` provided, and then update its status with the given `status`, in this case `"ringing"`.
+In this example, we find the Call record with the `uuid` provided, and then update its status with the given `status`, in this case `"ringing"`.
 
 ## To sum things up
 
@@ -99,4 +99,4 @@ You can view the [code used in this tutorial](https://github.com/workbetta/nexmo
 
 ## Next steps
 
-In the next tutorial we will look at receiving inbound Voice Calls into our application.
+In the next tutorial, we will look at receiving inbound Voice Calls into our application.
