@@ -129,7 +129,7 @@ end
 
 The response object might contain multiple `message` objects, as your request might have been broken up into multiple SMS messages due to the 160 character limit. If the status equals `0` the message has been queued with Nexmo, and we can store the `message-id` on the SMS record. The `message-id` can be used to track the status of the SMS message, specifically when a [Delivery Receipt](https://developer.nexmo.com/api/sms#delivery-receipt) comes in via a webhook.
 
-Now go ahead, submit the form and within a few seconds you should seen an SMS arrive!
+Now go ahead, submit the form and within a few seconds you should see an SMS arrive!
 
 ![Received SMS](sms-send/android.png)
 
