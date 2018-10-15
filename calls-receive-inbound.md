@@ -2,7 +2,7 @@
 
 _This is the third article in a series of "Getting Started with Nexmo Voice APIs and Ruby on Rails" tutorials. It continues the "Getting Started with Nexmo SMS and Ruby on Rails" series._
 
-In the previous article, you set up your Rails application to be publicly accessible by Nexmo, and then received a **Call Event Update** for a call in progress. In this article you will learn how to receive an inbound Call by implementing a similar webhook endpoint in Ruby on Rails.
+In the previous article, you set up your Rails application to be publicly accessible by Nexmo, and then received a **Call Event Update** for a call in progress. In this article, you will learn how to receive an inbound Call by implementing a similar webhook endpoint in Ruby on Rails.
 
 [View the source code on GitHub](https://github.com/workbetta/nexmo-rails-quickstart/blob/master/app/controllers/inbound_calls_controller.rb)
 
@@ -19,11 +19,11 @@ For this tutorial I assume you will:
 
 When someone calls the Nexmo Number that you purchased in the first tutorial it will be received by Nexmo, and we will then make a HTTP call to the `answer_url` for the Nexmo Application associated to your number.
 
-To receive this webhook you will need to set up a webhook endpoint and tell Nexmo where to find it. In the previous tutorial I already covered how to set up [Ngrok](http://ngrok.io) for your application to allow it to be accessible even in a development environment.
+To receive this webhook you will need to set up a webhook endpoint and tell Nexmo where to find it. In the previous tutorial, I already covered how to set up [Ngrok](http://ngrok.io) for your application to allow it to be accessible even in a development environment.
 
 ## Set the Webhook Endpoint with Nexmo
 
-The first step is to use the [Nexmo CLI tool](https://github.com/nexmo/nexmo-cli) to link the Nexmp Application we created in the previous tutorial to your Nexmo number. We pass in the phone number, and the application's UUID.
+The first step is to use the [Nexmo CLI tool](https://github.com/nexmo/nexmo-cli) to link the Nexmp Application we created in the previous tutorial to your Nexmo number. We pass in the phone number and the application's UUID.
 
 ```sh
 $ nexmo link:app 12015555522 abcd1234-ancd-abcd-abcd-abcd1234abcd
@@ -49,7 +49,7 @@ The hard part is really done again at this point. When a call comes in on your N
 }
 ```
 
-In this payload the sending conversation is identified by the `conversation_uuid` parameter, and the `from` and `to` specify the caller and the Nexmo number called. Let's add a new controller to process this payload and store a new SMS record.
+In this payload, the sending conversation is identified by the `conversation_uuid` parameter and the `from` and `to` specify the caller and the Nexmo number called. Let's add a new controller to process this payload and store a new SMS record.
 
 ```ruby
 # config/routes.rb
