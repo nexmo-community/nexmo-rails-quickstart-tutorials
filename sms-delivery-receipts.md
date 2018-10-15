@@ -2,7 +2,7 @@
 
 _This is the second article in a series of "Getting Started with Nexmo SMS and Ruby on Rails" tutorials._
 
-In our previous tutorial I showed you how to send an SMS using the Nexmo API and the Nexmo Ruby gem in a Rails application. What we haven't looked at though is how to know when a message has been delivered. In this tutorial we will look at what it means for a message to be delivered, and how we can listen for Delivery Receipts from Nexmo to update the status of an SMS in our application.
+In our previous tutorial, I showed you how to send an SMS using the Nexmo API and the Nexmo Ruby gem in a Rails application. What we haven't looked at though is how to know when a message has been delivered. In this tutorial, we will look at what it means for a message to be delivered, and how we can listen for Delivery Receipts from Nexmo to update the status of an SMS in our application.
 
 [View the source code on GitHub](https://github.com/workbetta/nexmo-rails-quickstart/blob/master/app/controllers/sms_delivery_receipts_controller.rb)
 
@@ -18,7 +18,7 @@ For this tutorial I assume you will:
 
 When you make a successful SMS request to Nexmo, the API returns an array of `message` objects, ideally with a status of `0` for "Success". At this moment the SMS has not been delivered yet, rather it's been queued for delivery with Nexmo.
 
-In the next step, Nexmo find the best carrier to deliver your SMS to the recipient, and when they do so they notify Nexmo of the delivery with a **Delivery Receipt (DLR)**.
+In the next step, Nexmo finds the best carrier to deliver your SMS to the recipient, and when they do so they notify Nexmo of the delivery with a **Delivery Receipt (DLR)**.
 
 To receive this DLR in your application, you will need to set up a webhook endpoint, telling Nexmo where to forward these receipts to.
 
@@ -26,7 +26,7 @@ To receive this DLR in your application, you will need to set up a webhook endpo
 
 ## Set the Webhook Endpoint with Nexmo
 
-To receive a webhook we need 2 things, firstly we need to set up our server so that Nexmo can make a HTTP call to it. If you are developing on a local machine this might be hard, which is where tooks like [Ngrok](http://ngrok.io) come in. I won't go too much into detail, but with Ngrok you can make your local Rails server available within seconds to the outside world.
+To receive a webhook we need 2 things, firstly we need to set up our server so that Nexmo can make a HTTP call to it. If you are developing on a local machine this might be hard, which is where tools like [Ngrok](http://ngrok.io) come in. I won't go too much into detail, but with Ngrok you can make your local Rails server available within seconds to the outside world.
 
 ```sh
 # forwarding port 3000 to an externally accessible URL
@@ -41,7 +41,7 @@ Forwarding                    http://6382942c.ngrok.io -> localhost:3000
 Forwarding                    https://6382942c.ngrok.io -> localhost:3000
 ```
 
-Secondly, we need to make sure our server has an endpoint in place that return a nice and clean HTTP 200 response when called. Let's add a new controller with an empty response.
+Secondly, we need to make sure our server has an endpoint in place that returns a nice and clean HTTP 200 response when called. Let's add a new controller with an empty response.
 
 ```ruby
 # config/routes.rb
@@ -98,7 +98,7 @@ def create
 end
 ```
 
-In this example we find the SMS record with the `messageId` provided, and then update its status with the given status, in this case `"delivered"`.
+In this example, we find the SMS record with the `messageId` provided, and then update its status with the given status, in this case `"delivered"`.
 
 _Note: Some US carriers do not support the feature. Also, if you are sending SMS to a Google Voice number, you will not get any receipt. We do not provide reach to other virtual number providers due to fraud prevention purposes. If you have any particular business case where you would like to be able to reach virtual numbers, please [contact our Support team](https://www.nexmo.com/contact-sales)!_
 
@@ -110,4 +110,4 @@ You can view the [code used in this tutorial](https://github.com/workbetta/nexmo
 
 ## Next steps
 
-In the next tutorial we will look at receiving inbound SMS messages into our application.
+In the next tutorial, we will look at receiving inbound SMS messages into our application.
