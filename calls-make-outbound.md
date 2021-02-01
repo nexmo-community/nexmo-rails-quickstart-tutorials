@@ -4,7 +4,7 @@ _This is the first article in a series of "Getting Started with Nexmo Voice APIs
 
 With the help of the [Nexmo Voice API](https://docs.nexmo.com/messaging/voice-api) you can make worldwide outbound and inbound calls in 23 languages with varieties of voices and accents. All you need is your virtual phone number, the [Ruby Gem](https://github.com/Nexmo/nexmo-ruby), and a few lines of code.
 
-In this tutorial, and the ones to follow, I will take you through some real-life examples of how to integrate Nexmo into your Rails application. We will see how to set up the basics, and then we will write some code together to properly integrate Nexmo to start making and receiving phone calls. Let's get started!
+In this tutorial and the ones to follow, I will take you through some real-life examples of how to integrate Nexmo into your Rails application. We will see how to set up the basics, and then we will write some code together to properly integrate Nexmo to start making and receiving phone calls. Let's get started!
 
 [View the source code on GitHub](https://github.com/workbetta/nexmo-rails-quickstart/blob/master/app/controllers/outbound_calls_controller.rb)
 
@@ -26,9 +26,9 @@ Before we can make our first API call you will need to [sign up for a Nexmo acco
 
 ## Buy a Nexmo Number using the CLI
 
-One of the easiest ways to purchase virtual phone numbers, setup applications, and configuring them all is using the Nexmo CLI tool](<https://github.com/nexmo/nexmo-cli>). In this tutorial we will use this as our main way of preparing our application.
+One of the easiest ways to purchase virtual phone numbers, setup applications, and configuring them all is using the Nexmo CLI tool](<https://github.com/nexmo/nexmo-cli>). In this tutorial, we will use this as our main way of preparing our application.
 
-The Nexmo CLI is a Node module, and therefore does require NPM to have been installed.
+The Nexmo CLI is a Node module and therefore does require NPM to have been installed.
 
 ```sh
 $ npm install nexmo-cli -g
@@ -36,7 +36,7 @@ $ nexmo setup YOUR-API-KEY YOUR-API-SECRET
 Credentials written to /Users/your_username/.nexmorc
 ```
 
-With this in place, we can run the following commands to find and purchase an Voice enabled number:
+With this in place, we can run the following commands to find and purchase a Voice enabled number:
 
 ```sh
 $ nexmo number:search US --voice
@@ -51,13 +51,13 @@ Alternatively, head over to the [Numbers page](https://dashboard.nexmo.com/buy-n
 
 ## Create a Nexmo Application
 
-In our previous serious of SMS tutorials we were able to configure a phone number directly with an endpoint. In this tutorial, we will be using the new, more powerful and more secure [Nexmo Applications](https://developer.nexmo.com/api/application) API for configuring our callbacks.
+In our previous serious of SMS tutorials, we were able to configure a phone number directly with an endpoint. In this tutorial, we will be using the new, more powerful and more secure [Nexmo Applications](https://developer.nexmo.com/api/application) API for configuring our callbacks.
 
 ![Make voice calls](calls-make-outbound/voice-make-call-diagram.png)
 
 _Diagram: Using The Voice API to call your mobile phone_
 
-Our first step is to create an application and saving it's UUID and private encryption key. We will be passing in some URLs as well for various callbacks, which we will need in future tutorials. For now, the URLs don't matter too much.
+Our first step is to create an application and saving its UUID and private encryption key. We will be passing in some URLs as well for various callbacks, which we will need in future tutorials. For now, the URLs don't matter too much.
 
 ```sh
 $ nexmo app:create "My Voice App" http://abc123.ngrok.io/inbound_calls http://abc123.ngrok.io/call_events --keyfile private.key --answer_method POST --event_method POST
@@ -110,13 +110,13 @@ This will play back a simple voice message to the recipient as specified by [`fi
 
 ## Make an Outbound Call from Ruby on Rails
 
-In a Rails application we'd probably have a Model for Calls where we can store the `to`, `from`, and maybe the `text` to play to the recipient before making the Nexmo API call. In my demo application I've whipped up [a simple form](https://github.com/workbetta/nexmo-rails-quickstart/blob/master/app/views/outbound_calls/index.html.erb) for this model.
+In a Rails application we'd probably have a Model for Calls where we can store the `to`, `from`, and maybe the `text` to play to the recipient before making the Nexmo API call. In my demo application, I've whipped up [a simple form](https://github.com/workbetta/nexmo-rails-quickstart/blob/master/app/views/outbound_calls/index.html.erb) for this model.
 
 `localhost:3000/outbound_calls`
 
 ![Make a call](calls-make-outbound/call-ui.png)
 
-When the form is submitted, we store the Call record and then make the call. In a real application you might use a background queue for this, though in this case we will just pass the Call record to a new method.
+When the form is submitted, we store the Call record and then make the call. In a real application, you might use a background queue for this, though in this case, we will just pass the Call record to a new method.
 
 ```ruby
 # config/routes.rb
@@ -178,7 +178,7 @@ The response object will contain a `uuid` if the call was initiated successfully
 
 ## Provide an NCCO to play back text
 
-When we called the `create_call` method we passed in the the URL for the Call object as a parameter to the `answer_url`. Depending on your setup, that URL will look something like this:
+When we called the `create_call` method we passed in the URL for the Call object as a parameter to the `answer_url`. Depending on your setup, that URL will look something like this:
 
 `http://abc123.ngrok.io/outbound_call/123`
 
@@ -211,4 +211,4 @@ You can view the [code used in this tutorial](https://github.com/workbetta/nexmo
 
 ## Next steps
 
-In the next tutorials we will look at receiving Call Events for calls we've created, and how to receive inbound calls as well.
+In the next tutorials, we will look at receiving Call Events for calls we've created, and how to receive inbound calls as well.
